@@ -45,7 +45,7 @@ export class MicrophoneRecorder {
       }
 
       if(audioCtx && mediaRecorder && mediaRecorder.state === 'inactive') {
-        mediaRecorder.start(10);
+        mediaRecorder.start(1000);
         const source = audioCtx.createMediaStreamSource(stream);
         source.connect(analyser);
         if(onStartCallback) { onStartCallback() };
